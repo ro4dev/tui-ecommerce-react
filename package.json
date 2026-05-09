@@ -1,0 +1,21 @@
+{
+  "name": "tui-ecommerce-react",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "postinstall": "node -e \"const fs=require('fs');const path=require('path');const pkgPath=path.join(process.cwd(),'node_modules','tui-components-react','package.json');const p=JSON.parse(fs.readFileSync(pkgPath,'utf-8'));p.main='./src/index.js';p.exports={'.':'./src/index.js','./src/*':'./src/*','./package.json':'./package.json'};fs.writeFileSync(pkgPath,JSON.stringify(p,null,2)+'\\n')\""
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tui-components-react": "github:ro4dev/tui-components-react-library"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.0",
+    "vite": "^5.1.0"
+  }
+}
